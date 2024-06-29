@@ -4,15 +4,16 @@ import loadAbout from './about';
 import './styles.css';
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadHome();
+    loadHome(); // Załaduj stronę główną przy pierwszym załadowaniu
 
-    const homeButton = document.querySelector('button:nth-child(1)');
-    const menuButton = document.querySelector('button:nth-child(2)');
-    const aboutButton = document.querySelector('button:nth-child(3)');
+    const homeButton = document.getElementById('homeButton');
+    const menuButton = document.getElementById('menuButton');
+    const aboutButton = document.getElementById('aboutButton');
 
-    homeButton.addEventListener('click', loadHome);
-    menuButton.addEventListener('click', loadMenu);
-    aboutButton.addEventListener('click', loadAbout);
+    homeButton.onclick = () => loadHome();
+    menuButton.onclick = () => loadMenu();
+    aboutButton.onclick = () => loadAbout();
+
 });
 
 console.log('Webpack is working!');

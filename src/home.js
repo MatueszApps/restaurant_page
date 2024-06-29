@@ -1,23 +1,27 @@
 import restaurantImage from './images/restaurant_photo.jpg';
 
-
-
-function loadHome(){
+function loadHome() {
     const content = document.getElementById('content');
+    content.innerHTML = ''; // Wyczyść istniejącą zawartość
+
+    const home = document.createElement('div');
+    home.classList.add('home');
 
     const img = document.createElement('img');
     img.src = restaurantImage;
     img.alt = 'Restaurant Image';
-    
-    const headline = document.createElement('h2');
-    headline.textContent = 'Welcome to our Kebab Restaurant';
-    
-    const text = document.createElement('p');
-    text.textContent = 'Welcome to "Sizzling Skewers," a vibrant kebab restaurant where culinary traditions meet modern flair. Our cozy, welcoming atmosphere is perfect for family gatherings or casual outings with friends. We pride ourselves on serving a diverse menu of mouth-watering kebabs, freshly prepared with premium cuts of meat, marinated to perfection, and grilled over an open flame. Complement your meal with our selection of homemade dips, fresh salads, and warm, fluffy pita bread. At Sizzling Skewers, every dish is a celebration of rich flavors and authentic cooking techniques, ensuring a memorable dining experience every time.'
 
-    content.appendChild(img);
-    content.appendChild(headline);
-    content.appendChild(text);
+    const headline = document.createElement('h1');
+    headline.textContent = 'Welcome to Our Restaurant';
+
+    const para = document.createElement('p');
+    para.textContent = 'We serve the best food in town. Come and enjoy a wonderful dining experience with us.';
+
+    home.appendChild(img);
+    home.appendChild(headline);
+    home.appendChild(para);
+
+    content.appendChild(home);
 }
 
-export default loadHome();
+export default loadHome;
