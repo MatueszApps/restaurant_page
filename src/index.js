@@ -1,1 +1,5 @@
-console.log('Webpack is working!');
+import loadHome from './home';
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadHome();
+})

@@ -1,4 +1,4 @@
-import restaurantImage from './images/restaurant.jpg';
+import restaurantImage from './images/restaurant_photo.jpg';
 
 
 
